@@ -2,6 +2,10 @@ var mongoose = require('mongoose')
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt')
 var userSchema = new Schema({
+    cnpf: {
+        type: String,
+        require: true
+    },
     name: {
         type: String,
         require: true

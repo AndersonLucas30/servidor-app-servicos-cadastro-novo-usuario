@@ -4,20 +4,21 @@ var config = require('../config/dbconfig')
 
 var functions = {
     addNew: function (req, res) {
-        if ((!req.body.name) || (!req.body.password)) {
-            res.json({success: false, msg: 'Enter all fields'})
+        if ((!req.body.name) || (!req.body.password) || (!req.body.cnpf)) {
+            res.json({success: false, msg: 'Preencha todos os campos'})
         }
         else {
             var newUser = User({
                 name: req.body.name,
-                password: req.body.password
+                password: req.body.password,
+                cnpf: req.body.cnpf
             });
             newUser.save(function (err, newUser) {
                 if (err) {
-                    res.json({success: false, msg: 'Failed to save'})
+                    res.json({success: false, msg: 'Falha ao salvar'})
                 }
                 else {
-                    res.json({success: true, msg: 'Successfully saved'})
+                    res.json({success: true, msg: 'Cadastrado com sucesso'})
                 }
             })
         }
