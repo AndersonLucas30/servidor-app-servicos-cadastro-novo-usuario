@@ -2,11 +2,20 @@ var mongoose = require('mongoose')
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt')
 var userSchema = new Schema({
+
+    name: {
+        type: String,
+        require: true
+    },
     cnpf: {
         type: String,
         require: true
     },
-    name: {
+    datanasc: {
+        type: String,
+        require: true
+    },
+    email: {
         type: String,
         require: true
     },

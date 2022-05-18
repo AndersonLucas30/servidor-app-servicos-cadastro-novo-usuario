@@ -4,7 +4,7 @@ var config = require('../config/dbconfig')
 
 var functions = {
     addNew: function (req, res) {
-        if ((!req.body.name) || (!req.body.password) || (!req.body.cnpf)) {
+        if ((!req.body.name) || (!req.body.cnpf) || (!req.body.datanasc) || (!req.body.email) || (!req.body.password)) {
             res.json({success: false, msg: 'Preencha todos os campos'})
         }
         else {
