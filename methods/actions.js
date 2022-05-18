@@ -10,8 +10,10 @@ var functions = {
         else {
             var newUser = User({
                 name: req.body.name,
-                password: req.body.password,
-                cnpf: req.body.cnpf
+                cnpf: req.body.cnpf,
+                datanasc: req.body.datanasc,
+                email: req.body.email,
+                password: req.body.password
             });
             newUser.save(function (err, newUser) {
                 if (err) {
