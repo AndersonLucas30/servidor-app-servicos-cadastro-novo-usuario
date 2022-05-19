@@ -3,14 +3,14 @@ var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt')
 var userSchema = new Schema({
 
-    name: {
+   /*  name: {
         type: String,
         require: true
     },
-   /* cnpf: {
+    cnpf: {
         type: String,
         require: true
-    }, */
+    },  */
     datanasc: {
         type: String,
         require: true
