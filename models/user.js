@@ -11,10 +11,10 @@ var userSchema = new Schema({
         type: String,
         require: true
     },
- /*   datanasc: {
+    datanasc: {
         type: String,
         require: true
-    },*/
+    },
     email: {
         type: String,
         require: true
