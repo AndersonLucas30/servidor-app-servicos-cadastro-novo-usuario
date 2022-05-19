@@ -7,10 +7,10 @@ var userSchema = new Schema({
         type: String,
         require: true
     },
-    cnpf: {
+   /* cnpf: {
         type: String,
         require: true
-    },
+    }, */
     datanasc: {
         type: String,
         require: true

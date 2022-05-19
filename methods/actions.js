@@ -4,13 +4,13 @@ var config = require('../config/dbconfig')
 
 var functions = {
     addNew: function (req, res) {
-        if ((!req.body.name) || (!req.body.cnpf) || (!req.body.datanasc) || (!req.body.email) || (!req.body.password)) {
+        if ((!req.body.name) /*|| (!req.body.cnpf) */ || (!req.body.datanasc) || (!req.body.email) || (!req.body.password)) {
             res.json({success: false, msg: 'Preencha todos os campos'})
         }
         else {
             var newUser = User({
                 name: req.body.name,
-                cnpf: req.body.cnpf,
+              //  cnpf: req.body.cnpf,
                 datanasc: req.body.datanasc,
                 email: req.body.email,
                 password: req.body.password
