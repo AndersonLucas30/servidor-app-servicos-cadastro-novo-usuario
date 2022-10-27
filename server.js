@@ -10,6 +10,7 @@ connectDB()
 
 const app = express()
 
+
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
@@ -22,6 +23,7 @@ app.use(passport.initialize())
 require('./config/passport')(passport)
 
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
+

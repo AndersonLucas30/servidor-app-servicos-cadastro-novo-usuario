@@ -6,23 +6,23 @@ var userSchema = new Schema({
      name: {
         type: String,
         require: true
-    },
-    cnpf: {
-        type: String,
-        require: true
     },  
-   /*  datanasc: {
+      cnpf: {
         type: String,
         require: true
-    }, */
+    },   
+      datanasc: {
+        type: String,
+        require: true
+    }, 
     email: {
         type: String,
         require: true
     }, 
-    password: {
+      password: {
         type: String,
         require: true
-    }
+    }  
 })
 
 userSchema.pre('save', function (next) {
